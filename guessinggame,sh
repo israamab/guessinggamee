@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# File: guessinggame.sh
+
+# Function to get the count of files in the current directory
+function get tire count i {
+1s -1 | wc -1
+    }
+
+echo "Welcome to the Guessing Game!"
+echo "Can vou guess how many files are in the current directory?"
+
+correct_count=$ (get_file_count)
+user_guess=-1
+
+while [[ Suser_guess -ne §correct_count ]]
+do
+
+read -p "Enter your guess: " user_guess
+
+# Check if user input is a valid number
+if [[ Suser_guess =~ ^[0-9]+$ ]]; then
+if [[ Suser_guess -lt Scorrect_count ]]; then
+echo "Your guess is too low. Try again!" 
+elif [[$user_guess -gt Scorrect_count]]; then
+echo "Your guess is too high. Try again!"
+else
+echo "Congratulations! You guessed it right." 
+fi
+echo "Please enter a valid number."
+user_guess=-1
+fi
+done
+
+echo "Thanks for plaving!"
